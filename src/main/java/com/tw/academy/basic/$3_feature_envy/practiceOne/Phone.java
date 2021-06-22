@@ -14,19 +14,7 @@ public class Phone {
     }
 
     public String getMobilePhoneNumber() {
-        return "(" + this.areaCode + ")" +
+        return "(" + this.areaCode + ") " +
                 this.prefix + "-" + this.number;
-    }
-
-    public String getAreaCode() {
-        return areaCode;
-    }
-
-    public String getPrefix() {
-        return prefix;
-    }
-
-    public String getNumber() {
-        return number;
     }
 }
