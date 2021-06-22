@@ -1,14 +1,14 @@
 package com.tw.academy.basic.$5_data_clumps;
 
 public class User {
-    private final String userName;
-    private final String userPhoneNumber;
-    private final String buyerAddress;
+    private String userName;
+    private String userPhoneNumber;
+    private String userAddress;
 
-    public User(String buyerName, String buyerPhoneNumber, String buyerAddress) {
-        userName = buyerName;
-        userPhoneNumber = buyerPhoneNumber;
-        this.buyerAddress = buyerAddress;
+    public User(String userName, String userPhoneNumber, String userAddress) {
+        this.userName = userName;
+        this.userPhoneNumber = userPhoneNumber;
+        this.userAddress = userAddress;
     }
 
     public String getUserName() {
@@ -19,7 +19,7 @@ public class User {
         return userPhoneNumber;
     }
 
-    public String getBuyerAddress() {
-        return buyerAddress;
+    public String getUserAddress() {
+        return userAddress;
     }
 }
