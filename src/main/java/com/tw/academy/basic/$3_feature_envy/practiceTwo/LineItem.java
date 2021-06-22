@@ -5,15 +5,14 @@ public class LineItem {
 	private double price;
 	private int quantity;
 
-	public LineItem(String description, double p, int quantity) {
-		super();
+	public LineItem(String description, double price, int quantity) {
 		this.description = description;
-		this.price = p;
+		this.price = price;
 		this.quantity = quantity;
 	}
 
-	public String getDescription() {
-		return description;
+	public double getSubItemAmount() {
+		return price * quantity;
 	}
 
 	public double getPrice() {
