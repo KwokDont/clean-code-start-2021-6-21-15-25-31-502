@@ -8,16 +8,17 @@ public class DeliveryManager {
 
     public DeliveryManager(String fromAddress, String toAddress) {
         this.toAddressObj = new Address(toAddress);
-        this.fromAddressObj = new Address(toAddress);
+        this.fromAddressObj = new Address(fromAddress);
         this.toAddress = toAddress;
         this.fromAddress = fromAddress;
     }
 
     public DeliverCenter allocate(){
-        if (getProvince(toAddress).equals(getProvince(fromAddress)) && getCity(toAddress).equals(getCity(fromAddress))){
+        if (toAddressObj.getProvince().equals(fromAddressObj.getProvince())
+                && toAddressObj.getCity().equals(fromAddressObj.getCity())){
             return DeliverCenter.LOCAL;
         }
-        if (getProvince(toAddress).equals(getProvince(fromAddress))) {
+        if (toAddressObj.getProvince().equals(fromAddressObj.getProvince())) {
             return DeliverCenter.PROVINCE;
         }
         return DeliverCenter.FOREIGN;
