@@ -10,6 +10,10 @@ package com.tw.academy.basic.$7_long_method;
 public class OrderReceipt {
     private Order order;
 
+    public static final String PRINT_TITLE = "======Printing Orders======\n";
+    public static final String SALE_TAX = "Sales Tax";
+    public static final String TOTAL_AMOUNT = "Total Amount";
+
     public OrderReceipt(Order order) {
         this.order = order;
     }
@@ -19,11 +23,10 @@ public class OrderReceipt {
         return order.getCustomerName();
     }
 
-    //todo: rename -- Tom
     public String printReceipt() {
         StringBuilder output = new StringBuilder();
 
-        output.append("======Printing Orders======\n");
+        output.append(PRINT_TITLE);
 
         output.append(order.getCustomerName());
         output.append(order.getCustomerAddress());
@@ -50,10 +53,10 @@ public class OrderReceipt {
         }
 
         // prints the state tax
-        output.append("Sales Tax").append('\t').append(totSalesTx);
+        output.append(SALE_TAX).append('\t').append(totSalesTx);
 
         // print total amount
-        output.append("Total Amount").append('\t').append(tot);
+        output.append(TOTAL_AMOUNT).append('\t').append(tot);
         return output.toString();
     }
 }
