@@ -13,6 +13,10 @@ public class Order {
         this.lineItems = lineItems;
     }
 
+    public String getCustomerInfo() {
+        return customerName + address;
+    }
+
     public String getCustomerName() {
         return customerName;
     }

@@ -5,3 +5,4 @@
 5.rename variable totSalesTx and tot
 6.extract constant variable
 7.extract methods from long method printReceipt 
+8.refactor data clumps, append print string in specific Class

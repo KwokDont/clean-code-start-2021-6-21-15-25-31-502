@@ -28,8 +28,7 @@ public class OrderReceipt {
 
         output.append(PRINT_TITLE);
 
-        output.append(order.getCustomerName());
-        output.append(order.getCustomerAddress());
+        output.append(order.getCustomerInfo());
 
         // prints lineItems
         double totalSalesTax = 0d;
