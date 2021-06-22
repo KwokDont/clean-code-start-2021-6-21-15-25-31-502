@@ -11,6 +11,13 @@ public class LineItem {
 		this.quantity = quantity;
 	}
 
+	public String genLineItemPrintInfo() {
+		return description + "\t"
+				+ price + "\t"
+				+ quantity + "\t"
+				+ totalAmount() + "\n";
+	}
+
 	public String getDescription() {
 		return description;
 	}
