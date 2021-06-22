@@ -25,6 +25,10 @@ public class LineItem {
 		return totalAmount() * .10;
 	}
 
+	public double getTotalAmountWithTax() {
+		return totalAmount() + getItemSalesTax();
+	}
+
     double totalAmount() {
         return price * quantity;
     }
