@@ -5,6 +5,9 @@ public class LineItem {
 	private double price;
 	private int quantity;
 
+	public static final String TAB = "\t";
+	public static final String NEXT_LINE = "\n";
+
 	public LineItem(String description, double price, int quantity) {
 		this.description = description;
 		this.price = price;
@@ -12,10 +15,10 @@ public class LineItem {
 	}
 
 	public String genLineItemPrintInfo() {
-		return description + "\t"
-				+ price + "\t"
-				+ quantity + "\t"
-				+ totalAmount() + "\n";
+		return description + TAB
+				+ price + TAB
+				+ quantity + TAB
+				+ totalAmount() + NEXT_LINE;
 	}
 
     double totalAmount() {
